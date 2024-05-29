@@ -70,7 +70,16 @@ export default function Home() {
                     </h1>
                   </Sliding>
                 </div>
-                <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2 basis-1/2 "></div>
+                <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2 basis-1/2 ">
+                  <Sliding className="self-center">
+                    <h1 className="text-center">Technologies</h1>
+                  </Sliding>
+                  <Sliding className="self-center">
+                    <h1 className="text-[#C23706] text-7xl font-black font-sans ">
+                      12
+                    </h1>
+                  </Sliding>
+                </div>
               </div>
             </FadingElement>
           </div>
