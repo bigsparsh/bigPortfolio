@@ -11,3 +11,10 @@
   @apply bg-[#C23704];
   @apply text-white;
 }
+::-webkit-scrollbar {
+  @apply w-2;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[#C23704];
+  @apply rounded-xl;
+}

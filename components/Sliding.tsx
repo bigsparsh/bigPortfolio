@@ -18,7 +18,7 @@ const Sliding = ({
         style={{ backgroundColor: color }}
         className="absolute w-full h-full rounded-xl"
         initial={{ width: "100%" }}
-        animate={{ width: 0 }}
+        whileInView={{ width: 0 }}
         transition={{ delay }}
       />
       {children}
