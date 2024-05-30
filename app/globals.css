@@ -4,6 +4,9 @@
 .judson {
   font-family: var(--font-judson);
 }
+* {
+  user-select: none;
+}
 *::selection {
   @apply bg-[#C23704];
   @apply text-white;

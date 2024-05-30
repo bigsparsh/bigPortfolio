@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Draggable from "@/components/Draggable";
 import FadingElement from "@/components/FadingElement";
 import Loading from "@/components/Loading";
 import Sliding from "@/components/Sliding";
@@ -47,39 +48,47 @@ export default function Home() {
         <div className="w-full p-5 rounded-[75px] bg-gradient-to-r from-[#8A2400] to-[#2E0800] flex gap-10">
           <div className="flex flex-col text-white judson basis-1/2 gap-5">
             <FadingElement>
-              <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2">
-                <Sliding> TypeScript + React</Sliding>
-                <Loading end="75%" />
-              </div>
+              <Draggable>
+                <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2">
+                  <Sliding> TypeScript + React</Sliding>
+                  <Loading end="75%" />
+                </div>
+              </Draggable>
             </FadingElement>
             <FadingElement>
-              <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2">
-                <Sliding delay={0.15}>Node JS</Sliding>
-                <Loading end="21%" />
-              </div>
+              <Draggable>
+                <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2">
+                  <Sliding delay={0.15}>Node JS</Sliding>
+                  <Loading end="21%" />
+                </div>
+              </Draggable>
             </FadingElement>
             <FadingElement>
               <div className="flex w-full gap-5">
-                <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2 basis-1/2">
-                  <Sliding className="self-center" delay={0.3}>
-                    <h1 className="text-center">Projects Completed</h1>
-                  </Sliding>
-                  <Sliding className="self-center" delay={0.45}>
-                    <h1 className="text-[#C23706] text-7xl font-black font-sans ">
-                      12
-                    </h1>
-                  </Sliding>
-                </div>
-                <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2 basis-1/2 ">
-                  <Sliding className="self-center" delay={0.6}>
-                    <h1 className="text-center">Technologies</h1>
-                  </Sliding>
-                  <Sliding className="self-center">
-                    <h1 className="text-[#C23706] text-7xl font-black font-sans ">
-                      12
-                    </h1>
-                  </Sliding>
-                </div>
+                <Draggable>
+                  <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2 basis-1/2">
+                    <Sliding className="self-center" delay={0.3}>
+                      <h1 className="text-center">Projects Completed</h1>
+                    </Sliding>
+                    <Sliding className="self-center" delay={0.45}>
+                      <h1 className="text-[#C23706] text-7xl font-black font-sans ">
+                        12
+                      </h1>
+                    </Sliding>
+                  </div>
+                </Draggable>
+                <Draggable>
+                  <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2 basis-1/2 ">
+                    <Sliding className="self-center" delay={0.6}>
+                      <h1 className="text-center">Technologies</h1>
+                    </Sliding>
+                    <Sliding className="self-center">
+                      <h1 className="text-[#C23706] text-7xl font-black font-sans ">
+                        12
+                      </h1>
+                    </Sliding>
+                  </div>
+                </Draggable>
               </div>
             </FadingElement>
           </div>
