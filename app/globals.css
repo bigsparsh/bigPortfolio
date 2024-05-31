@@ -6,6 +6,7 @@
 }
 * {
   user-select: none;
+  /* @apply border border-red-500; */
 }
 *::selection {
   @apply bg-[#C23704];

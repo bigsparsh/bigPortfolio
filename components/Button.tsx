@@ -3,19 +3,16 @@ const Button = ({
   children,
   normalBorder,
   activeBorder,
-  background,
   className,
 }: {
   children: string;
   normalBorder: string;
-  background: string;
   activeBorder: string;
   className?: string;
 }) => {
   return (
     <div className="relative w-fit h-fit group/button bg-none">
       <button
-        style={{ backgroundColor: background }}
         className={
           "\
 							 text-white \
@@ -51,7 +48,6 @@ const Button = ({
 								"
       ></div>
       <div
-        style={{ backgroundColor: activeBorder }}
         className="
 								absolute
 								w-5

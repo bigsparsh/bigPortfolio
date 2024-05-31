@@ -20,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={judson_init.variable + " bg-[#2E0800]"}>{children}</body>
+      <body
+        className={judson_init.variable + " bg-primary-500 overflow-x-hidden"}
+      >
+        {children}
+      </body>
     </html>
   );
 }
