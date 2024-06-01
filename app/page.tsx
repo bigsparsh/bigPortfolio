@@ -4,8 +4,8 @@ import FadingElement from "@/components/FadingElement";
 import FullPageShowCase from "@/components/FullPageShowCase";
 import Loading from "@/components/Loading";
 import Sliding from "@/components/Sliding";
-import { FaAws, FaCloudflare, FaLaugh, FaPython } from "react-icons/fa";
-import { FaNodeJs, FaR, FaReact } from "react-icons/fa6";
+import { FaAws, FaCloudflare, FaPython } from "react-icons/fa";
+import { FaNodeJs, FaReact } from "react-icons/fa6";
 import {
   SiDjango,
   SiExpress,
@@ -17,28 +17,34 @@ import {
 export default function Home() {
   return (
     <>
-      <section className="p-10">
-        <nav className="text-primary-200 flex text-2xl judson ">
+      <section className="p-5 lg:p-7 xl:p-10">
+        <nav className="text-primary-200 flex text-lg lg:text-xl xl:text-2xl judson ">
           <a
             href=""
-            className="py-5  px-10 text-white rounded-t-3xl bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
+            className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
             style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
           >
             <Sliding delay={0.3}>Home</Sliding>
           </a>
-          <a href="" className="py-5 px-10">
+          <a
+            href=""
+            className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl "
+          >
             <Sliding delay={0.15}>Contacts</Sliding>
           </a>
-          <a href="" className="py-5 px-10">
+          <a
+            href=""
+            className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl "
+          >
             <Sliding>About me</Sliding>
           </a>
         </nav>
         <div
-          className="w-full px-20 py-20 rounded-b-[75px] rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
+          className="w-full p-5 lg:p-10 xl:p-20 rounded-b-[25px] rounded-tr-[25px] lg:rounded-b-[50px] lg:rounded-tr-[50px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
           style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
         >
           <FadingElement>
-            <h1 className="text-8xl mb-6 judson tracking-[-0.065em] text-white leading-[75px]">
+            <h1 className="text-2xl lg:text-4xl xl:text-8xl mb-6 judson tracking-[-0.065em] text-white xl:leading-[0.75] lg:leading-[0.75] leading-[0.75]">
               <Sliding>Welcome to</Sliding>
               <Sliding delay={0.15}>Sparsh Singh&apos;s</Sliding>
               <Sliding delay={0.3}>Portfolio</Sliding>
@@ -107,7 +113,7 @@ export default function Home() {
                 <h1 className="text-4xl judson">About me</h1>
               </Sliding>
               <hr className="my-3" />
-              <div className="text-justify">
+              <div className="text-justify line-clamp-6">
                 <Sliding className="m-5" delay={0.3}>
                   Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                   reprehenderit enim labore culpa sint ad nisi Lorem pariatur

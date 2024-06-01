@@ -28,8 +28,8 @@ const FullPageShowCase = ({
   const textStyleArray: { x: MotionValue<string> }[] = [];
   const { scrollYProgress } = useScroll({ target: windowRef });
   const scrollY = useSpring(scrollYProgress);
-  const y = useTransform(scrollY, [0, 1], ["70vh", "0vh"]);
-  const scale = useTransform(scrollY, [0, 0.5, 1], [1, 2, 1]);
+  const scale = useTransform(scrollY, [0, 1], [1, 2]);
+  const opacity = useTransform(scrollY, [0, 1], [0.95, 1]);
 
   textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
   textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
@@ -38,7 +38,7 @@ const FullPageShowCase = ({
   textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
 
   return (
-    <div className="h-[250vh] ">
+    <div className="h-[300vh] ">
       <div className="h-[100vh] sticky text-primary-100/50 text-[25vh] leading-[19.5vh] font-black top-0 flex flex-col justify-evenly items-center  overflow-hidden my-10">
         <div
           className="absolute w-full h-full inset-0 z-10 pointer-events-none"
@@ -60,8 +60,8 @@ const FullPageShowCase = ({
           );
         })}
         <motion.div
-          style={{ top: y, scale }}
-          className="judson w-fit absolute z-10 top-0 text-7xl text-primary-100 bg-primary-500/50 backdrop-blur p-10 rounded-full border border-primary-100 shadow-black shadow-2xl flex gap-5"
+          style={{ scale, opacity }}
+          className="judson w-fit absolute z-10  text-7xl text-primary-100 bg-primary-500/50 backdrop-blur p-10 rounded-full border border-primary-100 shadow-black shadow-2xl flex gap-5"
           drag
           dragDirectionLock={false}
           dragElastic={0.5}
