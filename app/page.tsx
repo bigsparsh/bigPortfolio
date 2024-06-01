@@ -40,7 +40,7 @@ export default function Home() {
           </a>
         </nav>
         <div
-          className="w-full p-7 lg:p-10 xl:p-20 rounded-b-[55px] rounded-tr-[55px] lg:rounded-b-[65px] lg:rounded-tr-[65px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
+          className="w-full p-7 lg:p-10 xl:p-20 rounded-b-[35px] rounded-tr-[35px] lg:rounded-b-[65px] lg:rounded-tr-[65px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
           style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
         >
           <FadingElement>
@@ -60,11 +60,11 @@ export default function Home() {
         </div>
       </section>
       <section className=" px-5 lg:px-7 xl:px-10 pb-10">
-        <div className="w-full p-3 lg:p-4 xl:p-5 rounded-[55px] lg:rounded-[65px] xl:rounded-[75px] bg-gradient-to-b lg:bg-gradient-to-r from-primary-400 to-primary-500 flex flex-col lg:flex-row gap-5 lg:gap-7 xl:gap-10">
+        <div className="w-full p-3 lg:p-4 xl:p-5 rounded-[35px] lg:rounded-[35px] xl:rounded-[75px] bg-gradient-to-b lg:bg-gradient-to-r from-primary-400 to-primary-500 flex flex-col lg:flex-row gap-5 lg:gap-7 xl:gap-10">
           <div className="flex flex-col text-white judson basis-1/2 gap-3 lg:gap-4 xl:gap-5 text-base lg:text-xl xl:text-2xl">
             <FadingElement>
               <Draggable>
-                <div className="bg-primary-500 rounded-full py-4 px-8 lg:py-5 lg:px-9 xl:py-5 xl:px-10 flex flex-col gap-2">
+                <div className="bg-primary-500 rounded-full py-4 px-8 lg:py-5 lg:px-9 xl:py-5 xl:px-10 flex flex-col gap-1 lg:gap-2">
                   <Sliding>Frontend</Sliding>
                   <Loading end="75%" />
                 </div>
@@ -72,7 +72,7 @@ export default function Home() {
             </FadingElement>
             <FadingElement>
               <Draggable>
-                <div className="bg-primary-500 rounded-full py-4 px-8 lg:py-5 lg:px-9 xl:py-5 xl:px-10 flex flex-col gap-2">
+                <div className="bg-primary-500 rounded-full py-4 px-8 lg:py-5 lg:px-9 xl:py-5 xl:px-10 flex flex-col gap-1 lg:gap-2">
                   <Sliding delay={0.15}>Backend</Sliding>
                   <Loading end="85%" />
                 </div>
@@ -81,7 +81,7 @@ export default function Home() {
             <FadingElement>
               <div className="flex w-full gap-0 lg:gap-4 xl:gap-5">
                 <Draggable>
-                  <div className="bg-primary-500 rounded-l-3xl lg:rounded-full py-4 px-8 lg:py-5 lg:px-9 xl:py-5 xl:px-10 flex flex-col gap-2 basis-1/2">
+                  <div className="bg-primary-500 rounded-l-3xl lg:rounded-full py-4 px-8 lg:py-5 lg:px-9 xl:py-5 xl:px-10 flex flex-col gap-1 lg:gap-2 basis-1/2">
                     <Sliding className="self-center" delay={0.3}>
                       <h1 className="text-center">Projects </h1>
                     </Sliding>
@@ -93,7 +93,7 @@ export default function Home() {
                   </div>
                 </Draggable>
                 <Draggable>
-                  <div className="bg-primary-500 rounded-r-3xl lg:rounded-full py-4 px-8 lg:py-5 lg:px-9 xl:py-5 xl:px-10 flex flex-col gap-2 basis-1/2 ">
+                  <div className="bg-primary-500 rounded-r-3xl lg:rounded-full py-4 px-8 lg:py-5 lg:px-9 xl:py-5 xl:px-10 flex flex-col gap-1 lg:gap-2 basis-1/2 ">
                     <Sliding className="self-center" delay={0.6}>
                       <h1 className="text-center">Tech</h1>
                     </Sliding>
