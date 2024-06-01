@@ -38,8 +38,8 @@ const FullPageShowCase = ({
   textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
 
   return (
-    <div className="h-[300vh] ">
-      <div className="h-[100vh] sticky text-primary-100/50 text-[25vh] leading-[19.5vh] font-black top-0 flex flex-col justify-evenly items-center  overflow-hidden my-10">
+    <div className="h-[300dvh] ">
+      <div className="h-[100dvh] sticky text-primary-100/50 text-[25dvh] leading-[19.5dvh] font-black top-0 flex flex-col justify-evenly items-center  overflow-hidden my-10">
         <div
           className="absolute w-full h-full inset-0 z-10 pointer-events-none"
           style={{
@@ -61,7 +61,7 @@ const FullPageShowCase = ({
         })}
         <motion.div
           style={{ scale, opacity }}
-          className="judson w-fit absolute z-10  text-7xl text-primary-100 bg-primary-500/50 backdrop-blur p-10 rounded-full border border-primary-100 shadow-black shadow-2xl flex gap-5"
+          className="judson w-fit absolute z-10 text-5xl lg:text-6xl xl:text-7xl text-primary-100 bg-primary-500/50 backdrop-blur p-5 lg:p-7 xl:p-10 rounded-full border border-primary-100 shadow-black shadow-2xl flex gap-3 lg:gap-5"
           drag
           dragDirectionLock={false}
           dragElastic={0.5}

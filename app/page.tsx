@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </section>
       <section className=" px-5 lg:px-7 xl:px-10 pb-10">
-        <div className="w-full p-3 lg:p-4 xl:p-5 rounded-[35px] lg:rounded-[35px] xl:rounded-[75px] bg-gradient-to-b lg:bg-gradient-to-r from-primary-400 to-primary-500 flex flex-col lg:flex-row gap-5 lg:gap-7 xl:gap-10">
+        <div className="w-full p-3 lg:p-4 xl:p-5 rounded-[35px] lg:rounded-[65px] xl:rounded-[75px] bg-gradient-to-b lg:bg-gradient-to-r from-primary-400 to-primary-500 flex flex-col lg:flex-row gap-5 lg:gap-7 xl:gap-10">
           <div className="flex flex-col text-white judson basis-1/2 gap-3 lg:gap-4 xl:gap-5 text-base lg:text-xl xl:text-2xl">
             <FadingElement>
               <Draggable>
