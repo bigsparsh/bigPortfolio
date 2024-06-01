@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Sliding = ({
   children,
-  color = "#C23706",
+  color = "bg-primary-200",
   delay = 0,
   className,
 }: {
@@ -15,8 +15,7 @@ const Sliding = ({
   return (
     <div className={"relative w-fit h-fit " + className}>
       <motion.div
-        style={{ backgroundColor: color }}
-        className="absolute w-full h-full rounded-xl"
+        className={"absolute w-full h-full rounded-xl " + color}
         initial={{ width: "100%" }}
         whileInView={{ width: 0 }}
         transition={{ delay }}

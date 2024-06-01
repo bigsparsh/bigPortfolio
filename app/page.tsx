@@ -60,11 +60,11 @@ export default function Home() {
         </div>
       </section>
       <section className="px-10 pb-10">
-        <div className="w-full p-5 rounded-[75px] bg-gradient-to-r from-[#8A2400] to-[#2E0800] flex gap-10">
+        <div className="w-full p-5 rounded-[75px] bg-gradient-to-r from-primary-400 to-primary-500 flex gap-10">
           <div className="flex flex-col text-white judson basis-1/2 gap-5">
             <FadingElement>
               <Draggable>
-                <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2">
+                <div className="bg-primary-500 rounded-full text-2xl py-5 px-10 flex flex-col gap-2">
                   <Sliding> TypeScript + React</Sliding>
                   <Loading end="75%" />
                 </div>
@@ -72,7 +72,7 @@ export default function Home() {
             </FadingElement>
             <FadingElement>
               <Draggable>
-                <div className="bg-[#2E0800] rounded-full text-2xl py-5 px-10 flex flex-col gap-2">
+                <div className="bg-primary-500 rounded-full text-2xl py-5 px-10 flex flex-col gap-2">
                   <Sliding delay={0.15}>Node JS</Sliding>
                   <Loading end="21%" />
                 </div>
@@ -81,7 +81,7 @@ export default function Home() {
             <FadingElement>
               <div className="flex w-full gap-5">
                 <Draggable>
-                  <div className="bg-[#2E0800] rounded-full  text-2xl py-5 px-10 flex flex-col gap-2 basis-1/2">
+                  <div className="bg-primary-500 rounded-full  text-2xl py-5 px-10 flex flex-col gap-2 basis-1/2">
                     <Sliding className="self-center" delay={0.3}>
                       <h1 className="text-center">Projects Completed</h1>
                     </Sliding>
