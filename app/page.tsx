@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <section className="p-5 lg:p-7 xl:p-10">
-        <nav className="text-primary-200 flex text-lg lg:text-xl xl:text-2xl judson ">
+        <nav className="text-primary-200 flex text-base lg:text-xl xl:text-2xl judson ">
           <a
             href=""
             className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
@@ -40,19 +40,19 @@ export default function Home() {
           </a>
         </nav>
         <div
-          className="w-full p-5 lg:p-10 xl:p-20 rounded-b-[25px] rounded-tr-[25px] lg:rounded-b-[50px] lg:rounded-tr-[50px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
+          className="w-full p-7 lg:p-10 xl:p-20 rounded-b-[25px] rounded-tr-[25px] lg:rounded-b-[50px] lg:rounded-tr-[50px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
           style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
         >
           <FadingElement>
-            <h1 className="text-2xl lg:text-4xl xl:text-8xl mb-6 judson tracking-[-0.065em] text-white xl:leading-[0.75] lg:leading-[0.75] leading-[0.75]">
+            <h1 className="text-5xl lg:text-6xl xl:text-8xl mb-2 lg:mb-4 xl:mb-6 judson tracking-[-0.065em] text-white xl:leading-[0.75] lg:leading-[0.75] leading-[0.75]">
               <Sliding>Welcome to</Sliding>
               <Sliding delay={0.15}>Sparsh Singh&apos;s</Sliding>
               <Sliding delay={0.3}>Portfolio</Sliding>
             </h1>
             <Button
               className="judson text-xl bg-primary-500"
-              activeBorder="#FF4200"
-              normalBorder="white"
+              activeBorder="bg-primary-100"
+              normalBorder="bg-white"
             >
               Explore Projects
             </Button>
