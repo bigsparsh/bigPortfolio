@@ -25,11 +25,11 @@ const FullPageShowCase = ({
   const scale = useTransform(scrollY, [0, 1], [1, 2]);
   const opacity = useTransform(scrollY, [0, 1], [0.95, 1]);
 
-  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
-  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
-  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
-  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
-  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
+  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
+  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
+  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
+  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
+  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
 
   return (
     <div className="h-[300dvh] ">
@@ -46,7 +46,7 @@ const FullPageShowCase = ({
             <motion.h1
               key={index}
               ref={textRef}
-              style={textStyleArray[index]}
+              style={{ ...textStyleArray[index], willChange: "transform" }}
               className="text-nowrap even:self-end"
             >
               {string}
