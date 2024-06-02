@@ -54,7 +54,7 @@ const FullPageShowCase = ({
           );
         })}
         <motion.div
-          style={{ scale, opacity }}
+          style={{ scale, opacity, willChange: "transform" }}
           className="judson w-fit absolute z-10 text-5xl lg:text-6xl xl:text-7xl text-primary-100 bg-primary-500/50 backdrop-blur p-5 lg:p-7 xl:p-10 rounded-full border border-primary-100 shadow-black shadow-2xl flex gap-3 lg:gap-5"
           drag
           dragDirectionLock={false}
