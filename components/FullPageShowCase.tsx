@@ -1,6 +1,12 @@
 "use client";
 
-import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import {
+  useScroll,
+  useTransform,
+  motion,
+  MotionValue,
+  useSpring,
+} from "framer-motion";
 import { useRef } from "react";
 
 const FullPageShowCase = ({
@@ -21,7 +27,7 @@ const FullPageShowCase = ({
   ];
   const textStyleArray: { x: MotionValue<string> }[] = [];
   const { scrollYProgress } = useScroll({ target: windowRef });
-  const scrollY = scrollYProgress;
+  const scrollY = useSpring(scrollYProgress);
   const scale = useTransform(scrollY, [0, 1], [1, 2]);
   const opacity = useTransform(scrollY, [0, 1], [0.95, 1]);
 
