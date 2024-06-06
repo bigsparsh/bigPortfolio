@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getProjects } from "@/app/actions/projects";
+import { getProjects } from "@/actions/projects";
 import db from "@/db";
 import { ProjectTable } from "@/db/schema";
 
