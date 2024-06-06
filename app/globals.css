@@ -9,13 +9,13 @@
   /* @apply border border-red-500; */
 }
 *::selection {
-  @apply bg-[#C23704];
+  @apply bg-primary-200;
   @apply text-white;
 }
 ::-webkit-scrollbar {
   @apply w-2;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-[#C23704];
+  @apply bg-primary-200;
   @apply rounded-xl;
 }

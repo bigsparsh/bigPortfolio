@@ -9,3 +9,9 @@ export const ProjectTable = pgTable("project", {
   websiteUrl: varchar("website_url").notNull(),
   imageUrl: varchar("image_url").notNull(),
 });
+
+export const UserTable = pgTable("user", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  email: varchar("email", { length: 255 }).notNull().unique(),
+  password: varchar("password", { length: 255 }).notNull(),
+});

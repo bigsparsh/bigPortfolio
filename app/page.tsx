@@ -13,7 +13,7 @@ import {
   SiGooglecloud,
   SiMongodb,
 } from "react-icons/si";
-import { getProjects } from "./actions/projects";
+import { getProjects } from "@/actions/projects";
 
 export default async function Home() {
   console.log(await getProjects());
