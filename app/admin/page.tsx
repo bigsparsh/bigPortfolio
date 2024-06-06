@@ -5,11 +5,13 @@ import "./style.css";
 import { loginUser } from "@/actions/user";
 import Toast from "@/components/Toast";
 import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const Admin: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const email = useRef<HTMLInputElement>(null);
   const password = useRef<HTMLInputElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     window.onclick = () => {
@@ -30,6 +32,7 @@ const Admin: React.FC = () => {
     console.log(user);
     if (user != false && user.length != 0) {
       setError("You are logged in. Redirecting to the dashboard.");
+      router.push("/admin/dashboard");
       return;
     }
     setError("The credentials are incorrect. Please try again.");
