@@ -1,12 +1,25 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./style.css";
 import { loginUser } from "@/actions/user";
+import Toast from "@/components/Toast";
+import { AnimatePresence } from "framer-motion";
 
 const Admin: React.FC = () => {
+  const [error, setError] = useState<string | null>(null);
   const email = useRef<HTMLInputElement>(null);
   const password = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    window.onclick = () => {
+      setError(null);
+    };
+
+    return () => {
+      window.removeEventListener("click", () => { });
+    };
+  }, []);
 
   const sendInfo = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,10 +28,16 @@ const Admin: React.FC = () => {
       (password.current as HTMLInputElement).value,
     );
     console.log(user);
+    if (user != false && user.length != 0) {
+      setError("You are logged in. Redirecting to the dashboard.");
+      return;
+    }
+    setError("The credentials are incorrect. Please try again.");
   };
 
   return (
     <div className="h-screen  flex justify-center items-center relative">
+      <AnimatePresence>{error && <Toast>{error}</Toast>}</AnimatePresence>
       <div
         className="h-screen absolute w-screen z-0 opacity-20 blur-[1px]"
         id="back"

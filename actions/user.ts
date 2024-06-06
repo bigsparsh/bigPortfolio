@@ -5,6 +5,7 @@ import { UserTable } from "@/db/schema";
 import { and, eq } from "drizzle-orm";
 
 export const loginUser = async (email: string, password: string) => {
+  console.log(email, password);
   try {
     const user = await db
       .select()
