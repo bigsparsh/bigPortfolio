@@ -20,7 +20,7 @@ model User {
   password  String
 }
 model Project {
-  project_id          String   @id @default(uuid())
+  project_id  String   @id @default(uuid())
   name        String
   description String
   hosted_url String
