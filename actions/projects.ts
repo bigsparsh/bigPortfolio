@@ -1,10 +1,10 @@
 "use server";
 
-import db from "@/db";
-import { ProjectTable } from "@/db/schema";
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 
 export const getProjects = async () => {
-  return await db.select().from(ProjectTable);
+  return await prisma.project.findMany();
 };
 
 export const createProject = async (body: {
@@ -13,7 +13,14 @@ export const createProject = async (body: {
   githubUrl: string;
   websiteUrl: string;
   imageUrl: string;
-  createdAt?: Date;
 }) => {
-  return await db.insert(ProjectTable).values(body).returning({});
+  return await prisma.project.create({
+    data: {
+      name: body.name,
+      description: body.description,
+      github_url: body.githubUrl,
+      hosted_url: body.websiteUrl,
+      image_url: body.imageUrl,
+    },
+  });
 };

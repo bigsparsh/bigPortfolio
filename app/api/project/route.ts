@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createProject, getProjects } from "@/actions/projects";
-import db from "@/db";
-import { ProjectTable } from "@/db/schema";
 
 export async function GET() {
   return NextResponse.json({

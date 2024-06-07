@@ -1,13 +1,13 @@
 "use server";
 
-import db from "@/db";
-import { UserTable } from "@/db/schema";
-import { and, eq } from "drizzle-orm";
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 
 export const loginUser = async (email: string, password: string) => {
-  const [user] = await db
-    .select()
-    .from(UserTable)
-    .where(and(eq(UserTable.email, email), eq(UserTable.password, password)));
-  return user;
+  return await prisma.user.findUnique({
+    where: {
+      email: email,
+      password: password,
+    },
+  });
 };
