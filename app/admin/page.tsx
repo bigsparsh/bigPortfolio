@@ -29,7 +29,6 @@ const Admin: React.FC = () => {
       (email.current as HTMLInputElement).value,
       (password.current as HTMLInputElement).value,
     );
-    console.log(user);
     if (!user) {
       setError("The credentials are incorrect. Please try again.");
       return;

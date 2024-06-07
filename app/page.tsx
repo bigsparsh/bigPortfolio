@@ -13,10 +13,8 @@ import {
   SiGooglecloud,
   SiMongodb,
 } from "react-icons/si";
-import { getProjects } from "@/actions/projects";
 
 export default async function Home() {
-  console.log(await getProjects());
   return (
     <>
       <section className="p-5 lg:p-7 xl:p-10">
