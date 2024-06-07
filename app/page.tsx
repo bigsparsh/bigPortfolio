@@ -1,8 +1,10 @@
 import Button from "@/components/Button";
+import Image from "next/image";
 import Draggable from "@/components/Draggable";
 import FadingElement from "@/components/FadingElement";
 import FullPageShowCase from "@/components/FullPageShowCase";
 import Loading from "@/components/Loading";
+import ScrollingShowcase from "@/components/ScrollingShowcase";
 import Sliding from "@/components/Sliding";
 import { FaAws, FaCloudflare, FaPython } from "react-icons/fa";
 import { FaNodeJs, FaReact } from "react-icons/fa6";
@@ -179,6 +181,26 @@ export default async function Home() {
       >
         CLOUD
       </FullPageShowCase>
+      <ScrollingShowcase>
+        <>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+          <div className="w-[400px] aspect-square overflow-hidden border border-black"></div>
+        </>
+      </ScrollingShowcase>
     </>
   );
 }
