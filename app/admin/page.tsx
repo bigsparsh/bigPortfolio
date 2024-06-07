@@ -30,12 +30,12 @@ const Admin: React.FC = () => {
       (password.current as HTMLInputElement).value,
     );
     console.log(user);
-    if (user != false && user.length != 0) {
-      setError("You are logged in. Redirecting to the dashboard.");
-      router.push("/admin/dashboard");
+    if (!user) {
+      setError("The credentials are incorrect. Please try again.");
       return;
     }
-    setError("The credentials are incorrect. Please try again.");
+    setError("You are logged in. Redirecting to the dashboard.");
+    router.push("/admin/dashboard");
   };
 
   return (
