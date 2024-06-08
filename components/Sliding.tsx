@@ -19,6 +19,7 @@ const Sliding = ({
         initial={{ width: "100%" }}
         whileInView={{ width: 0 }}
         transition={{ delay }}
+        style={{ willChange: "width" }}
       />
       {children}
     </div>
