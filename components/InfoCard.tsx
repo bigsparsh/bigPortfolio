@@ -32,29 +32,35 @@ const InfoCard = ({
         </h1>
         <div className="my-3 grow line-clamp-[9] overflow-clip text-white text-justify">
           <FadingElement>
-            <Sliding delay={0.15}>{content}</Sliding>
+            <Sliding delay={0.2}>{content}</Sliding>
           </FadingElement>
         </div>
         <div className="flex gap-5 ">
           <FadingElement delay={0.05}>
             {codepen && (
-              <div className="p-4 w-[75px] h-[75px] rounded-full bg-primary-500 text-white text-3xl grid place-items-center">
-                <FaCodepen />
-              </div>
+              <a href={codepen} target="_blank">
+                <div className="p-4 w-[75px] h-[75px] rounded-full bg-primary-500 text-white text-3xl grid place-items-center">
+                  <FaCodepen />
+                </div>
+              </a>
             )}
           </FadingElement>
           <FadingElement delay={0.15}>
             {github && (
-              <div className="p-4 w-[75px] h-[75px] rounded-full bg-primary-500 text-white text-3xl grid place-items-center">
-                <FaGithub />
-              </div>
+              <a href={github} target="_blank">
+                <div className="p-4 w-[75px] h-[75px] rounded-full bg-primary-500 text-white text-3xl grid place-items-center">
+                  <FaGithub />
+                </div>
+              </a>
             )}
           </FadingElement>
           <FadingElement delay={0.25}>
             {hosting && (
-              <div className="p-4 w-[75px] aspect-square rounded-full bg-primary-500 text-white text-3xl grid place-items-center self-end">
-                <FaArrowUpRightFromSquare />
-              </div>
+              <a href={hosting} target="_blank">
+                <div className="p-4 w-[75px] aspect-square rounded-full bg-primary-500 text-white text-3xl grid place-items-center self-end">
+                  <FaArrowUpRightFromSquare />
+                </div>
+              </a>
             )}
           </FadingElement>
         </div>
