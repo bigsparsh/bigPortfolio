@@ -10,6 +10,7 @@ const Dashboard = () => {
   const githubUrl = useRef<HTMLInputElement>(null);
   const websiteUrl = useRef<HTMLInputElement>(null);
   const imageUrl = useRef<HTMLInputElement>(null);
+  const codepenUrl = useRef<HTMLInputElement>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -30,6 +31,7 @@ const Dashboard = () => {
       githubUrl: githubUrl.current?.value || "",
       websiteUrl: websiteUrl.current?.value || "",
       imageUrl: imageUrl.current?.value || "",
+      codepenUrl: codepenUrl.current?.value || "",
     });
 
     (name.current as HTMLInputElement).value = "";
@@ -37,6 +39,7 @@ const Dashboard = () => {
     (githubUrl.current as HTMLInputElement).value = "";
     (websiteUrl.current as HTMLInputElement).value = "";
     (imageUrl.current as HTMLInputElement).value = "";
+    (codepenUrl.current as HTMLInputElement).value = "";
 
     if (!project) {
       setError("There was an error creating the project");
@@ -73,6 +76,12 @@ const Dashboard = () => {
           type="text"
           placeholder="Enter the github url where the source code is"
           ref={githubUrl}
+          className="rounded-full bg-primary-400 px-4 py-2 placeholder:text-white/50 text-white outline-none"
+        />
+        <input
+          type="text"
+          placeholder="Specify the codepen url if it is hosted there"
+          ref={codepenUrl}
           className="rounded-full bg-primary-400 px-4 py-2 placeholder:text-white/50 text-white outline-none"
         />
         <input

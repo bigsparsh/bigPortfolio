@@ -25,5 +25,14 @@ model Project {
   description String
   hosted_url String
   github_url String
+  codepen_url String @default("")
   image_url String
+  created_at DateTime @default(now())
+}
+model Enquiry {
+  enquiry_id  String   @id @default(uuid())
+  name        String
+  email       String
+  message     String
+  created_at  DateTime @default(now())
 }

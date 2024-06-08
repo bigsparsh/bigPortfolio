@@ -13,6 +13,7 @@ export const createProject = async (body: {
   githubUrl: string;
   websiteUrl: string;
   imageUrl: string;
+  codepenUrl: string;
 }) => {
   return await prisma.project.create({
     data: {
@@ -21,6 +22,7 @@ export const createProject = async (body: {
       github_url: body.githubUrl,
       hosted_url: body.websiteUrl,
       image_url: body.imageUrl,
+      codepen_url: body.codepenUrl,
     },
   });
 };
