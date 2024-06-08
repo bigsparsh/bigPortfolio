@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { getProjects } from "@/actions/projects";
 import { Project } from "@prisma/client";
 import InfoCard from "./InfoCard";
-const ScrollingShowcase = ({ children }: { children: React.ReactNode }) => {
+const ScrollingShowcase = () => {
   const [projects, setProjects] = useState<Project[]>();
   useEffect(() => {
     fetchProjects();
