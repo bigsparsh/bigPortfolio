@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Judson } from "next/font/google";
+import { Judson, Pixelify_Sans } from "next/font/google";
 
 import "./globals.css";
 const judson_init = Judson({
@@ -8,6 +8,11 @@ const judson_init = Judson({
   variable: "--font-judson",
 });
 
+const pixel_init = Pixelify_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-pixel",
+});
 export const metadata: Metadata = {
   title: "Big Sparsh",
   description: "Portfolio / Resume for Sparsh Singh",
@@ -21,7 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={judson_init.variable + " bg-primary-500 overflow-x-hidden"}
+        className={
+          judson_init.variable +
+          " bg-primary-500 overflow-x-hidden " +
+          pixel_init.variable
+        }
       >
         {children}
       </body>

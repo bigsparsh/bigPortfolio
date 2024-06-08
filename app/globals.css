@@ -4,6 +4,9 @@
 .judson {
   font-family: var(--font-judson);
 }
+.pixel {
+  font-family: var(--font-pixel);
+}
 * {
   user-select: none;
   /* @apply border border-red-500; */

@@ -1,0 +1,42 @@
+@property --go {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+#body {
+  position: absolute;
+  background: radial-gradient(125% 50% at 50% 45%, transparent 90%, #2e0800 90%),
+    radial-gradient(125% 50% at 50% 55%, transparent 90%, #2e0800 90%),
+    radial-gradient(50% 150% at 50% 50%, transparent 90%, #2e0800 90%),
+    radial-gradient(125% 50% at 50% 43%, transparent 90%, #2e0800 90%),
+    radial-gradient(50% 150% at 48% 50%, transparent 90%, #2e0800 90%),
+    radial-gradient(125% 50% at 50% 42%, transparent 90%, black 90%),
+    radial-gradient(48% 150% at 48.5% 50%, transparent 90%, black 90%),
+    radial-gradient(125% 50% at 50% 55.5%, transparent 90%, black 90%);
+}
+#screen {
+  position: absolute;
+  color: #59ff0d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  background: repeating-linear-gradient(
+      transparent 0 40%,
+      #8a240075 40% 60%,
+      transparent 60%
+    )
+    0 var(--go) / 10px 10px #040d00;
+  background-color: #2e0800;
+  z-index: -1;
+  animation: move 0.5s linear infinite;
+}
+
+@keyframes move {
+  to {
+    --go: 100%;
+  }
+}
