@@ -9,7 +9,7 @@ const FakeMarquee = () => {
       transition={{ repeat: Infinity, duration: 2, repeatType: "mirror" }}
       className="text-primary-100 text-[3vw] font-black  py-2 border-y-2 border-primary-100"
     >
-      ENQUIRY FORM . ENQUIRY FORM . ENQUIRY FORM
+      ENQUIRY FORM
     </motion.div>
   );
 };

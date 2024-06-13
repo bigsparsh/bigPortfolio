@@ -19,7 +19,7 @@ const InfoCard = ({
   hosting?: string;
 }) => {
   return (
-    <div className="w-[500px] aspect-square grid place-items-center overflow-clip rounded-3xl relative group shadow-black shadow-2xl">
+    <div className="w-[300px] lg:w-[500px] aspect-square grid place-items-center overflow-clip rounded-3xl relative group shadow-black shadow-2xl">
       <div
         style={{ backgroundImage: `url(${image})` }}
         className="h-full w-full bg-contain bg-center group-hover:scale-125 bg-blend-overlay bg-primary-500/70 duration-200 absolute"
