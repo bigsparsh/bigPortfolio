@@ -39,8 +39,8 @@ const FullPageShowCase = ({
   textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
 
   return (
-    <div className="h-[100dvh] lg:h-[300dvh] ">
-      <div className="h-[100dvh] sticky text-primary-100/50 text-[25dvh] leading-[19.5dvh] font-black top-0 flex flex-col justify-evenly items-center  overflow-hidden my-10">
+    <div className="h-[100vh] lg:h-[300dvh] ">
+      <div className="h-[100vh] sticky text-primary-100/50 text-[25vh] leading-[19.5vh] font-black top-0 flex flex-col justify-evenly items-center  overflow-hidden my-10">
         <div
           className="absolute w-full h-full inset-0 z-10 pointer-events-none"
           style={{
