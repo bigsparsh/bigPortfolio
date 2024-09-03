@@ -16,7 +16,7 @@ const ScrollingShowcase = () => {
   const { scrollYProgress } = useScroll();
   const x = useTransform(scrollYProgress, [0, 1], ["-100%", "40%"]);
   return (
-    <div className="h-[900vh] w-full bg-primary-400/20">
+    <div className="h-[500vh] w-full bg-primary-400/20">
       <div
         className="h-[100vh] w-full  sticky top-0 flex justify-start items-center backdrop-opacity-40 overflow-hidden"
         style={{
