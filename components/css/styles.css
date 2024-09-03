@@ -24,13 +24,14 @@
   padding: 100px;
   line-height: 1.5rem;
   font-size: 1.2rem;
-  background: repeating-linear-gradient(
-      transparent 0 40%,
-      #8a240075 40% 60%,
-      transparent 60%
-    )
-    0 var(--go) / 10px 10px #040d00;
-  background-color: #2e0800;
+  background-color: #8a240075;
+  /* background: repeating-linear-gradient( */
+  /*     transparent 0 40%, */
+  /*     #8a240075 40% 60%, */
+  /*     transparent 60% */
+  /*   ) */
+  /*   0 var(--go) / 10px 10px #040d00; */
+  /* background-color: #2e0800; */
   z-index: -1;
   /* animation: move 0.5s linear infinite; */
 }

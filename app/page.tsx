@@ -6,6 +6,7 @@ import FullPageShowCase from "@/components/FullPageShowCase";
 import Loading from "@/components/Loading";
 import ScrollingShowcase from "@/components/ScrollingShowcase";
 import Sliding from "@/components/Sliding";
+import Link from "next/link";
 import { FaAws, FaCloudflare, FaPython } from "react-icons/fa";
 import { FaNodeJs, FaReact } from "react-icons/fa6";
 import {
@@ -21,25 +22,25 @@ export default async function Home() {
     <>
       <section className="p-5 lg:p-7 xl:p-10">
         <nav className="text-primary-200 flex text-base lg:text-xl xl:text-2xl judson ">
-          <a
+          <Link
             href=""
             className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
             style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
           >
             <Sliding delay={0.3}>Home</Sliding>
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            href="/blog"
             className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl "
           >
-            <Sliding delay={0.15}>Contacts</Sliding>
-          </a>
-          <a
+            <Sliding delay={0.15}>Blog</Sliding>
+          </Link>
+          <Link
             href=""
             className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl "
           >
             <Sliding>About me</Sliding>
-          </a>
+          </Link>
         </nav>
         <div
           className="w-full p-7 lg:p-10 xl:p-20 rounded-b-[35px] rounded-tr-[35px] lg:rounded-b-[65px] lg:rounded-tr-[65px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"

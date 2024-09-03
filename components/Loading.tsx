@@ -6,7 +6,7 @@ const Loading = ({ end }: { end: string }) => {
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: end }}
-        transition={{ ease: "easeInOut" }}
+        transition={{ duration: 1.5, ease: "anticipate" }}
         className="bg-primary-200 h-full rounded-full"
       />
     </div>
