@@ -32,7 +32,7 @@
     0 var(--go) / 10px 10px #040d00;
   background-color: #2e0800;
   z-index: -1;
-  animation: move 0.5s linear infinite;
+  /* animation: move 0.5s linear infinite; */
 }
 
 @keyframes move {

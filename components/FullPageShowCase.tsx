@@ -27,7 +27,8 @@ const FullPageShowCase = ({
   ];
   const textStyleArray: { x: MotionValue<string> }[] = [];
   const { scrollYProgress } = useScroll({ target: windowRef });
-  const scrollY = useSpring(scrollYProgress);
+  const scrollY = scrollYProgress;
+  // const scrollY = useSpring(scrollYProgress);
   const scale = useTransform(scrollY, [0, 1], [1, 2]);
   const opacity = useTransform(scrollY, [0, 1], [0.95, 1]);
 

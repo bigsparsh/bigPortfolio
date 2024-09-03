@@ -45,7 +45,7 @@ const CrtDisplay = () => {
       <div id="body" className="w-full h-full pointer-events-none" />
       <FakeMarquee />
       <form
-        className="text-primary-100 text-3xl font-black p-10 rounded-2xl flex flex-col gap-y-3 "
+        className="text-primary-100 text-sm md:text-lg lg:text-3xl font-black p-10 rounded-2xl flex flex-col gap-y-3 "
         onSubmit={handleSubmit}
       >
         <div className="flex gap-5 items-center justify-between">
@@ -53,7 +53,7 @@ const CrtDisplay = () => {
           <input
             type="text"
             ref={name}
-            className="border-2 text-xl  font-normal border-primary-100 px-5 py-1 bg-transparent outline-none "
+            className="border-2 font-normal border-primary-100 px-5 py-0 lg:py-1 bg-transparent outline-none "
             style={{ caretShape: "underscore" }}
           />
         </div>
@@ -62,7 +62,7 @@ const CrtDisplay = () => {
           <input
             ref={email}
             type="email"
-            className="border-2 text-xl  font-normal border-primary-100 px-5 py-1 bg-transparent outline-none "
+            className="border-2 font-normal border-primary-100 px-5 py-0 lg:py-1 bg-transparent outline-none "
             style={{ caretShape: "underscore" }}
           />
         </div>
@@ -70,7 +70,7 @@ const CrtDisplay = () => {
           <label>Message: </label>
           <textarea
             ref={message}
-            className="border-2 text-xl  font-normal border-primary-100 px-5 bg-transparent outline-none "
+            className="border-2 font-normal border-primary-100 px-5 py-0 lg:py-1 bg-transparent outline-none "
           ></textarea>
         </div>
         <button className="border-2  border-primary-100 px-5 py-1 bg-transparent outline-none hover:bg-primary-100 hover:text-white duration-200">

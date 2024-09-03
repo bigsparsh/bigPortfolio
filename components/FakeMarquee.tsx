@@ -3,12 +3,7 @@ import { motion } from "framer-motion";
 
 const FakeMarquee = () => {
   return (
-    <motion.div
-      initial={{ x: -100 }}
-      animate={{ x: 100 }}
-      transition={{ repeat: Infinity, duration: 2, repeatType: "mirror" }}
-      className="text-primary-100 text-[3vw] font-black  py-2 border-y-2 border-primary-100"
-    >
+    <motion.div className="text-primary-100 text-3xl lg:text-5xl font-black py-0 lg:py-2 ">
       ENQUIRY FORM
     </motion.div>
   );

@@ -14,7 +14,7 @@ const ScrollingShowcase = () => {
     setProjects(await getProjects());
   };
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], ["-200%", "10%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["-100%", "40%"]);
   return (
     <div className="h-[900vh] w-full bg-primary-400/20">
       <div
