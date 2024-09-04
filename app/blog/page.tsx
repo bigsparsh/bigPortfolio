@@ -1,5 +1,6 @@
 import Sliding from "@/components/Sliding";
-import Image from "next/image";
+import BlogCard from "@/components/BlogCard";
+import SideAppear from "@/components/SideAppear";
 
 const Blog = () => {
   return (
@@ -15,16 +16,34 @@ const Blog = () => {
           backgroundSize: "100%,  200px 200px",
         }}
       >
-        <div className="grid grid-cols-2 p-10">
-          <div className="flex gap-10">
-            <Image
-              src="https://picsum.photos/1920/1080"
-              alt="My photo"
-              width={100}
-              height={100}
+        <div className="grid grid-cols-1 lg:grid-cols-2 p-10 gap-5">
+          <SideAppear appearFrom="left" delay={0}>
+            <BlogCard
+              title="How I scaled my realtime app to 1 million users."
+              description="So this is where I tell you how a chatting application I built in 2019 scaled to 1 million users in 2021. I will be sharing the architecture, the challenges and the solutions I used to scale the app. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance.
+"
+              tags={["Node.js", "Socket.io", "Redis", "Docker"]}
+              image="https://picsum.photos/1920/1080"
             />
-          </div>
-          <div>rjqskhdjksadkh</div>
+          </SideAppear>
+          <SideAppear appearFrom="right" delay={0.1}>
+            <BlogCard
+              title="How I scaled my realtime app to 1 million users."
+              description="So this is where I tell you how a chatting application I built in 2019 scaled to 1 million users in 2021. I will be sharing the architecture, the challenges and the solutions I used to scale the app. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance.
+"
+              tags={["Node.js", "Socket.io", "Redis", "Docker"]}
+              image="https://picsum.photos/1920/1080"
+            />{" "}
+          </SideAppear>
+          <SideAppear delay={0.2}>
+            <BlogCard
+              title="How I scaled my realtime app to 1 million users."
+              description="So this is where I tell you how a chatting application I built in 2019 scaled to 1 million users in 2021. I will be sharing the architecture, the challenges and the solutions I used to scale the app. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance. I will also be sharing the tools I used to monitor the app and how I optimized the app for performance.
+"
+              tags={["Node.js", "Socket.io", "Redis", "Docker"]}
+              image="https://picsum.photos/1920/1080"
+            />
+          </SideAppear>
         </div>
       </div>
     </div>
