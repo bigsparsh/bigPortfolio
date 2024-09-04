@@ -29,6 +29,21 @@ model Project {
   image_url String
   created_at DateTime @default(now())
 }
+model Blog {
+  blog_id     String   @id @default(uuid())
+  title       String
+  description String
+  image_url   String
+  created_at  DateTime @default(now())
+}
+model BlogContent {
+  content_id  String   @id @default(uuid())
+  blog_id     String
+  index       Int
+  paragraph   String?
+  image_url   String?
+  blog        Blog     @relation(fields: [blog_id], references: [blog_id])
+}
 model Enquiry {
   enquiry_id  String   @id @default(uuid())
   name        String
