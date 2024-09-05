@@ -26,6 +26,8 @@ export const createBlog = async (blog: {
         index: blog.sections[i].index,
         paragraph: blog.sections[i].para,
         image_url: blog.sections[i].image,
+        heading: blog.sections[i].heading,
+        code: blog.sections[i].code,
       },
     });
   }

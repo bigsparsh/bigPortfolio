@@ -43,6 +43,8 @@ model BlogContent {
   index       Int
   paragraph   String?
   image_url   String?
+  heading     String?
+  code        String?
   blog        Blog     @relation(fields: [blog_id], references: [blog_id])
 }
 model Enquiry {
