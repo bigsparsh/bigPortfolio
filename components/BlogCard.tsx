@@ -19,7 +19,7 @@ const BlogCard = ({
   return (
     <div className="flex flex-col lg:flex-row gap-3 bg-primary-500/80 h-[400px] lg:h-full backdrop-blur rounded-3xl overflow-clip border-8 border-primary-100">
       <div
-        className="basis-1/3 bg-center bg-cover relative before:absolute brefore:content[''] before:bg-gradient-to-tr before:from-primary-100/50 before:to-primary-500/50  before:w-full before:h-full border-r-8 border-primary-100 h-full"
+        className="basis-1/3 bg-center bg-cover relative before:absolute brefore:content[''] before:bg-gradient-to-tr before:from-primary-100/50 before:to-primary-500/50  before:w-full before:h-full border-b-8 lg:border-r-8 border-primary-100 h-full"
         style={{
           backgroundImage: `url('${image}')`,
         }}

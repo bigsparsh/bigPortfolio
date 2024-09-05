@@ -14,16 +14,16 @@ const ScrollingShowcase = () => {
     setProjects(await getProjects());
   };
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], ["-100%", "40%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["-200%", "80%"]);
   return (
-    <div className="h-[500vh] w-full bg-primary-400/20">
+    <div className="h-[700vh] lg:h-[500vh] w-full bg-primary-400/20">
       <div
         className="h-[100vh] w-full  sticky top-0 flex justify-start items-center backdrop-opacity-40 overflow-hidden"
         style={{
           background: `linear-gradient( 45deg, #2e0800 0% 35%, transparent 35% 65%, #2e0800 65% 100%) center / 50px 50px, linear-gradient( -45deg, transparent 0% 47.5%, #2e0800 47.5% 52.5%, transparent 52.5% 100%) center / 100px 100px`,
         }}
       >
-        <h1 className="judson text-7xl p-10 self-start font-semibold text-primary-100 tracking-tight">
+        <h1 className="judson text-6xl lg:text-7xl p-10 self-start font-semibold text-primary-100 tracking-tight">
           <Sliding>Projects</Sliding>
         </h1>
         <motion.div

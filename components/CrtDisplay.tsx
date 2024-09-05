@@ -45,7 +45,7 @@ const CrtDisplay = () => {
       <div id="body" className="w-full h-full pointer-events-none" />
       <FakeMarquee />
       <form
-        className="text-primary-100 w-max-md text-sm md:text-lg lg:text-3xl font-black p-10 rounded-2xl flex flex-col gap-y-3 "
+        className="text-primary-100 w-[300px] lg:w-[600px] text-sm md:text-lg lg:text-3xl font-black p-0 lg:p-10 rounded-2xl space-y-2"
         onSubmit={handleSubmit}
       >
         <div className="flex gap-5 items-center justify-between">
@@ -53,7 +53,7 @@ const CrtDisplay = () => {
           <input
             type="text"
             ref={name}
-            className="border-2 font-normal border-primary-100 px-5 py-0 lg:py-1 bg-transparent outline-none "
+            className="border-2 font-base border-primary-100 px-5 py-0 lg:py-1 bg-transparent outline-none w-min"
             style={{ caretShape: "underscore" }}
           />
         </div>
@@ -73,7 +73,7 @@ const CrtDisplay = () => {
             className="border-2 font-normal border-primary-100 px-5 py-0 lg:py-1 bg-transparent outline-none "
           ></textarea>
         </div>
-        <button className="border-2  border-primary-100 px-5 py-1 bg-transparent outline-none hover:bg-primary-100 hover:text-white duration-200">
+        <button className="border-2  border-primary-100 px-5 py-1 bg-transparent outline-none hover:bg-primary-100 hover:text-white duration-200 w-full mt-2">
           Send enquiry to Sparsh
         </button>
       </form>

@@ -20,7 +20,7 @@ import {
 export default async function Home() {
   return (
     <>
-      <section className="p-5 lg:p-7 xl:p-10">
+      <section className="p-3 lg:p-7 xl:p-10">
         <nav className="text-primary-200 flex text-base lg:text-xl xl:text-2xl judson ">
           <Link
             href=""
@@ -47,13 +47,13 @@ export default async function Home() {
           style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
         >
           <FadingElement>
-            <h1 className="text-5xl lg:text-6xl xl:text-8xl mb-2 lg:mb-4 xl:mb-6 judson tracking-[-0.065em] text-white xl:leading-[0.75] lg:leading-[0.75] leading-[0.75]">
+            <h1 className="text-4xl lg:text-6xl xl:text-8xl mb-2 lg:mb-4 xl:mb-6 judson tracking-[-0.065em] text-white xl:leading-[0.75] lg:leading-[0.75] leading-[0.75]">
               <Sliding>Welcome to</Sliding>
               <Sliding delay={0.15}>Sparsh Singh&apos;s</Sliding>
               <Sliding delay={0.3}>Portfolio</Sliding>
             </h1>
             <Button
-              className="judson text-xl bg-primary-500"
+              className="judson text-base lg:text-xl bg-primary-500"
               activeBorder="bg-primary-100"
               normalBorder="bg-white"
             >
@@ -62,7 +62,7 @@ export default async function Home() {
           </FadingElement>
         </div>
       </section>
-      <section className=" px-5 lg:px-7 xl:px-10 pb-10">
+      <section className=" px-3 lg:px-7 xl:px-10 pb-10">
         <div className="w-full p-3 lg:p-4 xl:p-5 rounded-[35px] lg:rounded-[65px] xl:rounded-[75px] bg-gradient-to-b lg:bg-gradient-to-r from-primary-400 to-primary-500 flex flex-col lg:flex-row gap-5 lg:gap-7 xl:gap-10">
           <div className="flex flex-col text-white judson basis-1/2 gap-3 lg:gap-4 xl:gap-5 text-base lg:text-xl xl:text-2xl">
             <FadingElement>
