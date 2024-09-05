@@ -70,6 +70,7 @@ const AddBlog = () => {
         para?: string;
         image?: string;
         heading?: string;
+        code?: string;
       }[];
     } = {
       total: globalIndex,

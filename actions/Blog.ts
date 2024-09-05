@@ -9,6 +9,8 @@ export const createBlog = async (blog: {
   sections: {
     index: number;
     para?: string;
+    heading?: string;
+    code?: string;
     image?: string;
   }[];
 }) => {
