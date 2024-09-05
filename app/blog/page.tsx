@@ -7,7 +7,7 @@ const Blog = async () => {
   const blogs = await getBlogList();
   return (
     <div className="h-screen flex flex-col">
-      <h1 className="judson text-7xl p-10 self-start font-semibold text-primary-100 tracking-tight ">
+      <h1 className="judson text-7xl p-5 lg:p-10 self-start font-semibold text-primary-100 tracking-tight ">
         <Sliding>The Blog</Sliding>
       </h1>
       <div
@@ -18,7 +18,7 @@ const Blog = async () => {
           backgroundSize: "100%,  200px 200px",
         }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 p-10 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 p-5 lg:p-10 gap-3 lg:gap-5">
           {blogs.map((ele, index) => {
             return (
               <SideAppear
