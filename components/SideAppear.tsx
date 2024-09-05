@@ -12,8 +12,12 @@ const SideAppear = ({
 }) => {
   return (
     <motion.div
-      initial={{ x: appearFrom === "left" ? "-200%" : "200%" }}
-      animate={{ x: 0 }}
+      initial={{
+        x: appearFrom === "left" ? "-200%" : "200%",
+        opacity: 0,
+        filter: "blur(50px)",
+      }}
+      animate={{ x: 0, opacity: 1, filter: "blur(0px)" }}
       style={{ willChange: "transform" }}
       transition={{ delay }}
     >

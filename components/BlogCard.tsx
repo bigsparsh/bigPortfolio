@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Sliding from "./Sliding";
 
 const BlogCard = ({
@@ -5,12 +7,15 @@ const BlogCard = ({
   tags,
   description,
   image,
+  blog_id,
 }: {
   title: string;
+  blog_id: string;
   tags: string[];
   description: string;
   image: string;
 }) => {
+  const router = useRouter();
   return (
     <div className="flex gap-3 bg-primary-500/80 backdrop-blur rounded-3xl overflow-clip border-8 border-primary-100">
       <div
@@ -19,7 +24,12 @@ const BlogCard = ({
           backgroundImage: `url('${image}')`,
         }}
       >
-        <button className="bg-primary-100 text-xl tracking-tighter pl-3 pb-2 pr-2 pt-1 rounded-bl-3xl absolute right-0 before:content[''] before:absolute before:rounded-tr-3xl before:border-t-8 before:border-r-8 before:border-primary-100 before:w-5 before:h-5 before:top-[-8px] before:left-[-12px] after:content[''] after:absolute after:rounded-tr-3xl after:border-t-8 after:border-r-8 after:border-primary-100 after:w-5 after:h-5 after:bottom-[-12px] after:right-[-7px]">
+        <button
+          className="bg-primary-100 text-xl tracking-tighter pl-3 pb-2 pr-2 pt-1 rounded-bl-3xl absolute right-0 before:content[''] before:absolute before:rounded-tr-3xl before:border-t-8 before:border-r-8 before:border-primary-100 before:w-5 before:h-5 before:top-[-8px] before:left-[-12px] after:content[''] after:absolute after:rounded-tr-3xl after:border-t-8 after:border-r-8 after:border-primary-100 after:w-5 after:h-5 after:bottom-[-12px] after:right-[-7px]"
+          onClick={() => {
+            router.push("/blog/" + blog_id);
+          }}
+        >
           <Sliding delay={0.7}>Open</Sliding>
         </button>
       </div>
