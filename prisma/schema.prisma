@@ -35,6 +35,7 @@ model Blog {
   description String
   image_url   String
   created_at  DateTime @default(now())
+  blog_content BlogContent[]
 }
 model BlogContent {
   content_id  String   @id @default(uuid())
