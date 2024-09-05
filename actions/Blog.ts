@@ -29,5 +29,23 @@ export const createBlog = async (blog: {
       },
     });
   }
-  console.log(newBlog);
+};
+
+export const getBlogList = async () => {
+  return await prisma.blog.findMany({});
+};
+
+export const getBlogData = async (blog_id: string) => {
+  return await prisma.blog.findUnique({
+    where: {
+      blog_id,
+    },
+    include: {
+      blog_content: {
+        orderBy: {
+          index: "asc",
+        },
+      },
+    },
+  });
 };
