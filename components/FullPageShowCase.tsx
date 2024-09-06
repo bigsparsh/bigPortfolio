@@ -1,11 +1,11 @@
 "use client";
 
 import {
-  useScroll,
-  useTransform,
+  // useScroll,
+  // useTransform,
   motion,
-  MotionValue,
-  useSpring,
+  // MotionValue,
+  // useSpring,
 } from "framer-motion";
 import { useRef } from "react";
 
@@ -16,7 +16,7 @@ const FullPageShowCase = ({
   children: string;
   icon: React.ReactNode;
 }) => {
-  const windowRef = useRef(null);
+  // const windowRef = useRef(null);
   const string = `${children.toUpperCase()} . ${children.toUpperCase()} . ${children.toUpperCase()} . ${children.toUpperCase()}`;
   const textRefArray = [
     useRef(null),
@@ -27,8 +27,8 @@ const FullPageShowCase = ({
   ];
   // const textStyleArray: { x: MotionValue<string> }[] = [];
   const textStyleArray: any[] = [];
-  const { scrollYProgress } = useScroll({ target: windowRef });
-  const scrollY = scrollYProgress;
+  // const { scrollYProgress } = useScroll({ target: windowRef });
+  // const scrollY = scrollYProgress;
   // const scrollY = useSpring(scrollYProgress);
   // const scale = useTransform(scrollY, [0, 1], [1, 2]);
   // const opacity = useTransform(scrollY, [0, 1], [0.95, 1]);
@@ -62,6 +62,7 @@ const FullPageShowCase = ({
               ref={textRef}
               animate={textStyleArray[index].animate}
               initial={textStyleArray[index].initial}
+              style={{ willChange: "transform" }}
               transition={{
                 duration: 45,
                 ease: "linear",

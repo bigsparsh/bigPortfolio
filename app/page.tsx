@@ -21,7 +21,7 @@ export default async function Home() {
   return (
     <>
       <section className="p-3 lg:p-7 xl:p-10">
-        <nav className="text-primary-200 flex text-base lg:text-xl xl:text-2xl judson ">
+        <nav className="text-primary-200 flex text-sm lg:text-xl xl:text-2xl judson ">
           <Link
             href=""
             className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
@@ -110,26 +110,26 @@ export default async function Home() {
               </div>
             </FadingElement>
           </div>
-          <div className="text-white basis-1/2 flex justify-center items-center p-3 lg:p-0 ">
+          <div className="text-primary-100 basis-1/2 flex justify-center items-center p-3 lg:p-0 ">
             <FadingElement>
               <Sliding delay={0.15}>
                 <h1 className=" text-2xl lg:text-3xl xl:text-4xl judson">
                   About me
                 </h1>
               </Sliding>
-              <hr className="my-2 xl:my-3" />
-              <div className="text-justify line-clamp-6 text-sm lg:text-base">
+              <hr className="my-2 xl:my-3 border-primary-200" />
+              <div className="line-clamp-6 text-sm lg:text-base leading-5 tracking-wide">
                 <Sliding className="m-0 lg:m-5" delay={0.3}>
-                  Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-                  reprehenderit enim labore culpa sint ad nisi Lorem pariatur
-                  mollit ex esse exercitation amet. Nisi anim cupidatat
-                  excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem
-                  est aliquip amet voluptate voluptate dolor minim nulla est
-                  proident. Nostrud officia pariatur ut officia. Sit irure elit
-                  esse ea nulla sunt Aliqua reprehenderit commodo ex non
-                  excepteur duis sunt velit enim. Voluptate laboris sint
-                  cupidatat ullamco ut ea consectetur et est culpa et culpa
-                  duis. <br />
+                  I am a student of Computer Science engineering and I am a very
+                  passionate and enthusiastic person. My skill set has been
+                  growing for years and through those years I have mastered
+                  several web technologies, currently I intend to venture into
+                  the world of advanced backends and devops using bleeding edge
+                  technologies and learn to implement them myslef. I excel at
+                  system design and love to solve complex problems and reverse
+                  engineer applications in order to undersand their
+                  architecture.
+                  <br />
                 </Sliding>
                 <Sliding className="mx-0 lg:mx-5" delay={0.45}>
                   Lorem ipsum dolor sit amet, officia excepteur ex fugiat
