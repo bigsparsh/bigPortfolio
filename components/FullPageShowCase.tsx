@@ -25,18 +25,25 @@ const FullPageShowCase = ({
     useRef(null),
     useRef(null),
   ];
-  const textStyleArray: { x: MotionValue<string> }[] = [];
+  // const textStyleArray: { x: MotionValue<string> }[] = [];
+  const textStyleArray: any[] = [];
   const { scrollYProgress } = useScroll({ target: windowRef });
   const scrollY = scrollYProgress;
   // const scrollY = useSpring(scrollYProgress);
-  const scale = useTransform(scrollY, [0, 1], [1, 2]);
-  const opacity = useTransform(scrollY, [0, 1], [0.95, 1]);
+  // const scale = useTransform(scrollY, [0, 1], [1, 2]);
+  // const opacity = useTransform(scrollY, [0, 1], [0.95, 1]);
 
-  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
-  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
-  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
-  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
-  textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
+  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
+  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
+  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
+  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["30%", "0%"]) });
+  // textStyleArray.push({ x: useTransform(scrollY, [0, 1], ["0%", "30%"]) });
+
+  textStyleArray.push({ animate: { x: "30%" }, initial: { x: "0%" } });
+  textStyleArray.push({ animate: { x: "0%" }, initial: { x: "30%" } });
+  textStyleArray.push({ animate: { x: "30%" }, initial: { x: "0%" } });
+  textStyleArray.push({ animate: { x: "0%" }, initial: { x: "30%" } });
+  textStyleArray.push({ animate: { x: "30%" }, initial: { x: "0%" } });
 
   return (
     <div className="h-[100vh] lg:h-[300dvh] ">
@@ -53,15 +60,21 @@ const FullPageShowCase = ({
             <motion.h1
               key={index}
               ref={textRef}
-              style={{ ...textStyleArray[index], willChange: "transform" }}
-              className="text-nowrap even:self-end"
+              animate={textStyleArray[index].animate}
+              initial={textStyleArray[index].initial}
+              transition={{
+                duration: 45,
+                ease: "linear",
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+              className="text-nowrap even:self-end opacity-35"
             >
               {string}
             </motion.h1>
           );
         })}
         <motion.div
-          style={{ scale, opacity, willChange: "opacity" }}
           className="judson w-fit absolute z-10 text-5xl lg:text-6xl xl:text-7xl text-primary-100 bg-primary-500/50 backdrop-blur p-5 lg:p-7 xl:p-10 rounded-full border border-primary-100 shadow-black shadow-2xl flex gap-3 lg:gap-5"
           drag
           dragDirectionLock={false}

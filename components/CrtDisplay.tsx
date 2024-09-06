@@ -45,7 +45,7 @@ const CrtDisplay = () => {
       <div id="body" className="w-full h-full pointer-events-none" />
       <FakeMarquee />
       <form
-        className="text-primary-100 w-[300px] lg:w-[600px] text-sm md:text-lg lg:text-3xl font-black p-0 lg:p-10 rounded-2xl space-y-2"
+        className="text-primary-100 w-[275px] lg:w-[600px] text-sm md:text-lg lg:text-3xl font-black p-0 lg:p-10 rounded-2xl space-y-2"
         onSubmit={handleSubmit}
       >
         <div className="flex gap-5 items-center justify-between">
