@@ -17,7 +17,8 @@ model User {
   user_id        String   @id @default(uuid())
   email     String   @unique
   name      String
-  password  String
+  password  String?
+  comments  Comments[]
 }
 model Project {
   project_id  String   @id @default(uuid())
@@ -36,7 +37,9 @@ model Blog {
   image_url   String
   created_at  DateTime @default(now())
   blog_content BlogContent[]
+  comments Comments[]
 }
+
 model BlogContent {
   content_id  String   @id @default(uuid())
   blog_id     String
@@ -47,6 +50,17 @@ model BlogContent {
   code        String?
   blog        Blog     @relation(fields: [blog_id], references: [blog_id])
 }
+
+model Comments {
+  comment_id  String   @id @default(uuid())
+  blog_id     String
+  message     String
+  user_id     String
+  created_at  DateTime @default(now())
+  blog        Blog     @relation(fields: [blog_id], references: [blog_id])
+  user        User     @relation(fields: [user_id], references: [user_id])
+}
+
 model Enquiry {
   enquiry_id  String   @id @default(uuid())
   name        String

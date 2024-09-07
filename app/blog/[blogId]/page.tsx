@@ -1,5 +1,6 @@
 import { getBlogData } from "@/actions/Blog";
 import Sliding from "@/components/Sliding";
+import { FaPaperPlane } from "react-icons/fa";
 
 const BlogContent = async ({
   params,
@@ -11,7 +12,14 @@ const BlogContent = async ({
   const blogData = await getBlogData(params.blogId);
   console.log(blogData);
   return (
-    <div className="flex flex-col w-[95vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] py-5 lg:py-10 m-auto">
+    <div
+      className="flex flex-col w-[95vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] py-5 lg:py-10 m-auto"
+      style={{
+        background: `
+radial-gradient(circle, #ff420050 10%, transparent 10%) center/ 20px 20px
+`,
+      }}
+    >
       <h1 className="judson text-4xl md:text-5xl lg:text-7xl self-start font-semibold text-primary-100 tracking-tighter leading-7 px-2 lg:leading-[3.5rem] my-5 lg:my-10">
         <Sliding>{blogData?.title}</Sliding>
       </h1>
@@ -48,6 +56,39 @@ const BlogContent = async ({
           );
         }
       })}
+      <div className="w-full bg-primary-400/50 my-10 rounded-xl p-3 lg:p-5 flex flex-col gap-3">
+        <h1 className="judson text-3xl md:text-4xl lg:text-5xl self-start font-semibold text-primary-100 tracking-tighter leading-7 px-2 lg:leading-[3.5rem] flex justify-between w-full items-center">
+          <Sliding>What do you think?</Sliding>
+          <button className="text-base lg:text-2xl grid place-items-center bg-primary-500 px-4 py-2 rounded-2xl">
+            <FaPaperPlane />{" "}
+          </button>
+        </h1>
+        <textarea
+          className="rounded-xl text-sm lg:text-base text-primary-100 bg-primary-500 outline-none p-3 placeholder:text-primary-100/50 resize-none"
+          rows={7}
+          placeholder="Write your thoughts about this blog in a comment"
+        ></textarea>
+        <div className="mt-4 p-3 lg:p-5 bg-primary-500 text-primary-100 rounded-2xl flex flex-col gap-2  lg:gap-3">
+          <div className="flex gap-3 items-center">
+            <div
+              className="h-8 lg:h-10 aspect-square bg-center bg-cover rounded-full  bg-primary-100/50 bg-blend-overlay"
+              style={{
+                backgroundImage: `url('https://avatars.githubusercontent.com/u/56167853?v=4')`,
+              }}
+            />
+            <div className="flex flex-col">
+              <h1 className="judson text-2xl leading-6">Sparsh Singh</h1>
+              <p className="text-primary-100/70 text-sm">
+                sparshsingh7586@gmail.com
+              </p>
+            </div>
+          </div>
+          <div className="w-full h-[3px] rounded-[100%] bg-primary-400/50" />
+          <p className="text-sm lg:text-base">
+            This is a very nice blog. I really liked it. Keep up the good work.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

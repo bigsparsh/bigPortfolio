@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import CrtDisplay from "@/components/CrtDisplay";
 import Draggable from "@/components/Draggable";
 import FadingElement from "@/components/FadingElement";
@@ -7,7 +6,6 @@ import Loading from "@/components/Loading";
 import NavBar from "@/components/Navbar";
 import ScrollingShowcase from "@/components/ScrollingShowcase";
 import Sliding from "@/components/Sliding";
-import Link from "next/link";
 import { FaAws, FaCloudflare, FaPython } from "react-icons/fa";
 import { FaNodeJs, FaReact } from "react-icons/fa6";
 import {
