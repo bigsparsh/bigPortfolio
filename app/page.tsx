@@ -4,6 +4,7 @@ import Draggable from "@/components/Draggable";
 import FadingElement from "@/components/FadingElement";
 import FullPageShowCase from "@/components/FullPageShowCase";
 import Loading from "@/components/Loading";
+import NavBar from "@/components/Navbar";
 import ScrollingShowcase from "@/components/ScrollingShowcase";
 import Sliding from "@/components/Sliding";
 import Link from "next/link";
@@ -21,46 +22,7 @@ export default async function Home() {
   return (
     <>
       <section className="p-3 lg:p-7 xl:p-10">
-        <nav className="text-primary-200 flex text-sm lg:text-xl xl:text-2xl judson ">
-          <Link
-            href=""
-            className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
-            style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
-          >
-            <Sliding delay={0.3}>Home</Sliding>
-          </Link>
-          <Link
-            href="/blog"
-            className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl "
-          >
-            <Sliding delay={0.15}>Blog</Sliding>
-          </Link>
-          <Link
-            href=""
-            className="px-3 py-1 lg:py-3 lg:px-7 xl:py-5 xl:px-10 text-white rounded-t-xl lg:rounded-t-2xl xl:rounded-t-3xl "
-          >
-            <Sliding>About me</Sliding>
-          </Link>
-        </nav>
-        <div
-          className="w-full p-7 lg:p-10 xl:p-20 rounded-b-[35px] rounded-tr-[35px] lg:rounded-b-[65px] lg:rounded-tr-[65px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
-          style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
-        >
-          <FadingElement>
-            <h1 className="text-4xl lg:text-6xl xl:text-8xl mb-2 lg:mb-4 xl:mb-6 judson tracking-[-0.065em] text-white xl:leading-[0.75] lg:leading-[0.75] leading-[0.75]">
-              <Sliding>Welcome to</Sliding>
-              <Sliding delay={0.15}>Sparsh Singh&apos;s</Sliding>
-              <Sliding delay={0.3}>Portfolio</Sliding>
-            </h1>
-            <Button
-              className="judson text-base lg:text-xl bg-primary-500"
-              activeBorder="bg-primary-100"
-              normalBorder="bg-white"
-            >
-              Explore Projects
-            </Button>
-          </FadingElement>
-        </div>
+        <NavBar />
       </section>
       <section className=" px-3 lg:px-7 xl:px-10 pb-10">
         <div className="w-full p-3 lg:p-4 xl:p-5 rounded-[35px] lg:rounded-[65px] xl:rounded-[75px] bg-gradient-to-b lg:bg-gradient-to-r from-primary-400 to-primary-500 flex flex-col lg:flex-row gap-5 lg:gap-7 xl:gap-10">
