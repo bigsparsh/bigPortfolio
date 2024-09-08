@@ -16,6 +16,7 @@ const Admin: React.FC = () => {
   const router = useRouter();
 
   if (session.status === "unauthenticated") router.push("/api/auth/signin");
+  console.log(session);
 
   useEffect(() => {
     window.onclick = () => {

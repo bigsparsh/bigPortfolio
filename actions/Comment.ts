@@ -1,18 +1,19 @@
 "use server";
 import { PrismaClient } from "@prisma/client";
-import { getServerSession } from "next-auth";
 
 const prisma = new PrismaClient();
 
-export const createComment = async (message: string, blog_id: string) => {
-  const user = await getServerSession();
-
-  if (user) {
+export const createComment = async (
+  message: string,
+  blog_id: string,
+  user_id: string,
+) => {
+  if (message && blog_id && user_id) {
     const newComment = await prisma.comments.create({
       data: {
         message,
         blog_id,
-        user_id: user?.user.user_id,
+        user_id,
       },
       include: {
         user: true,

@@ -88,7 +88,7 @@ const NavBar = () => {
       </nav>
 
       <div
-        className="w-full p-7 lg:p-10 xl:p-20 rounded-b-[35px] rounded-tr-[35px] lg:rounded-b-[65px] lg:rounded-tr-[65px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300"
+        className="w-full p-7 lg:p-10 xl:p-20 rounded-b-[35px] rounded-tr-[35px] lg:rounded-b-[65px] lg:rounded-tr-[65px] xl:rounded-b-[75px] xl:rounded-tr-[75px] bg-fixed bg-center bg-no-repeat bg-blend-soft-light bg-primary-300 relative overflow-clip"
         style={{ backgroundImage: "url('//picsum.photos/1920/1080')" }}
         ref={scope2}
       >

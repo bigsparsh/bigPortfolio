@@ -41,17 +41,18 @@ const handler = NextAuth({
         image: string;
       };
     }) {
+      console.log("Going into error");
       await prisma.user.upsert({
+        where: {
+          email: user.email,
+        },
         create: {
           name: user.name,
-          email: user.name,
+          email: user.email,
           profile_img: user.image,
         },
         update: {
           profile_img: user.image,
-        },
-        where: {
-          email: user.email,
         },
       });
       return true;
