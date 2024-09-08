@@ -2,14 +2,16 @@ import Sliding from "@/components/Sliding";
 import BlogCard from "@/components/BlogCard";
 import SideAppear from "@/components/SideAppear";
 import { getBlogList } from "@/actions/Blog";
+import LogoutBtn from "@/components/LogoutBtn";
 
 const Blog = async () => {
   const blogs = await getBlogList();
   return (
     <div className="h-screen flex flex-col">
-      <h1 className="judson text-4xl lg:text-7xl p-5 lg:p-10 self-start font-semibold text-primary-100 tracking-tight ">
+      <div className="judson text-4xl lg:text-7xl p-5 lg:p-10 self-start font-semibold text-primary-100 tracking-tight flex justify-between items-center w-full">
         <Sliding>The Blog</Sliding>
-      </h1>
+        <LogoutBtn />
+      </div>
       <div
         className="grow overflow-x-clip"
         style={{
