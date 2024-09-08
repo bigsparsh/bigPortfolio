@@ -10,6 +10,9 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
   ],
+  pages: {
+    signIn: "/auth",
+  },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {

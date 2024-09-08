@@ -2,7 +2,6 @@
 import { motion, useAnimate } from "framer-motion";
 import Link from "next/link";
 import Sliding from "./Sliding";
-import { RefObject } from "react";
 import FadingElement from "./FadingElement";
 import Button from "./Button";
 

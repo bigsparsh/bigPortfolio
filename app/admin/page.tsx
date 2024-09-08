@@ -6,12 +6,16 @@ import { loginUser } from "@/actions/user";
 import Toast from "@/components/Toast";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { signOut, useSession } from "next-auth/react";
 
 const Admin: React.FC = () => {
+  const session = useSession();
   const [error, setError] = useState<string | null>(null);
   const email = useRef<HTMLInputElement>(null);
   const password = useRef<HTMLInputElement>(null);
   const router = useRouter();
+
+  if (session.status === "unauthenticated") router.push("/api/auth/signin");
 
   useEffect(() => {
     window.onclick = () => {
@@ -55,6 +59,14 @@ const Admin: React.FC = () => {
         <p className="text-center text-sm text-primary-700/80">
           Enter your credentials
         </p>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            signOut();
+          }}
+        >
+          hello world
+        </button>
         <input
           ref={email}
           type="email"
