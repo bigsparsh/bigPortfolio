@@ -17,9 +17,9 @@ const BlogCard = ({
 }) => {
   const router = useRouter();
   return (
-    <div className="flex flex-col lg:flex-row gap-3 bg-primary-500/80 h-[400px] lg:h-full backdrop-blur rounded-3xl overflow-clip border-8 border-primary-100">
+    <div className="flex flex-col lg:flex-row gap-3 bg-primary-500/80 h-[400px] lg:h-full backdrop-blur rounded-3xl overflow-clip border-4 lg:border-8 border-primary-100">
       <div
-        className="basis-1/3 bg-center bg-cover relative before:absolute brefore:content[''] before:bg-gradient-to-tr before:from-primary-100/50 before:to-primary-500/50  before:w-full before:h-full border-b-8 lg:border-r-8 border-primary-100 h-full"
+        className=" bg-center bg-cover relative before:absolute brefore:content[''] before:bg-gradient-to-tr before:from-primary-100/50 before:to-primary-500/50  before:w-full before:h-full h-56 border-b-4 lg:border-r-8 border-primary-100 lg:h-full grow"
         style={{
           backgroundImage: `url('${image}')`,
         }}
@@ -33,8 +33,8 @@ const BlogCard = ({
           <Sliding delay={0.7}>Open</Sliding>
         </button>
       </div>
-      <div className="flex flex-col p-3 lg:p-5 basis-2/3">
-        <h1 className="text-2xl lg:text-3xl judson font-semibold text-primary-100 mb-3 tracking-tight leading-7">
+      <div className="flex flex-col px-3 pb-3 lg:p-5 basis-1/2">
+        <h1 className="text-xl md:text-2xl lg:text-3xl judson font-semibold text-primary-100 mb-3 tracking-tight  leading-4 md:leading-5 lg:leading-7">
           <Sliding>{title}</Sliding>
         </h1>
         <div className="flex gap-1 lg:gap-3 mb-3 text-xs lg:text-sm flex-wrap">
@@ -44,7 +44,7 @@ const BlogCard = ({
             </Sliding>
           ))}
         </div>
-        <div className="text-primary-100 leading-5 text-sm lg:text-base line-clamp-6 overflow-clip">
+        <div className="text-primary-100 leading-4 lg:leading-5 text-xs md:text-sm lg:text-base line-clamp-6 overflow-clip">
           <Sliding delay={0.5}>{description}</Sliding>
         </div>
       </div>
