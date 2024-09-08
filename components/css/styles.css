@@ -5,14 +5,15 @@
 }
 #body {
   position: absolute;
-  background: radial-gradient(125% 50% at 50% 45%, transparent 90%, #2e0800 90%),
-    radial-gradient(125% 50% at 50% 55%, transparent 90%, #2e0800 90%),
-    radial-gradient(50% 150% at 50% 50%, transparent 90%, #2e0800 90%),
-    radial-gradient(125% 50% at 50% 43%, transparent 90%, #2e0800 90%),
-    radial-gradient(50% 150% at 48% 50%, transparent 90%, #2e0800 90%),
-    radial-gradient(125% 50% at 50% 42%, transparent 90%, black 90%),
-    radial-gradient(48% 150% at 48.5% 50%, transparent 90%, black 90%),
-    radial-gradient(125% 50% at 50% 55.5%, transparent 90%, black 90%);
+  /* background: radial-gradient(125% 50% at 50% 45%, transparent 90%, #2e0800 90%), */
+  /*   radial-gradient(125% 50% at 50% 55%, transparent 90%, #2e0800 90%), */
+  /*   radial-gradient(50% 150% at 50% 50%, transparent 90%, #2e0800 90%), */
+  /*   radial-gradient(125% 50% at 50% 43%, transparent 90%, #2e0800 90%), */
+  /*   radial-gradient(50% 150% at 48% 50%, transparent 90%, #2e0800 90%), */
+  /*   radial-gradient(125% 50% at 50% 42%, transparent 90%, black 90%), */
+  /*   radial-gradient(48% 150% at 48.5% 50%, transparent 90%, black 90%), */
+  /*   radial-gradient(125% 50% at 50% 55.5%, transparent 90%, black 90%); */
+  @apply md:bg-[radial-gradient(125%_50%_at_50%_45%,_transparent_90%,_#1a0700_90%),_radial-gradient(125%_50%_at_50%_55%,_transparent_90%,_#1a0700_90%),_radial-gradient(50%_150%_at_50%_50%,_transparent_90%,_#1a0700_90%),_radial-gradient(125%_50%_at_50%_43%,_transparent_90%,_#1a0700_90%),_radial-gradient(50%_150%_at_48%_50%,_transparent_90%,_#1a0700_90%),_radial-gradient(125%_50%_at_50%_42%,_transparent_90%,_black_90%),_radial-gradient(48%_150%_at_48.5%_50%,_transparent_90%,_black_90%),_radial-gradient(125%_50%_at_50%_55.5%,_transparent_90%,_black_90%)] bg-none;
 }
 #screen {
   position: absolute;
@@ -24,7 +25,13 @@
   padding: 100px;
   line-height: 1.5rem;
   font-size: 1.2rem;
-  background-color: #8a240075;
+  background-color: #8a2400;
+  backdrop-filter: grayscale(100%);
+  background-image: linear-gradient(#3b1304 70%, transparent 70%),
+    linear-gradient(90deg, #3b1304 60%, transparent 10%),
+    linear-gradient(-90deg, #3b1304 10%, transparent 10%),
+    linear-gradient(transparent 90%, #3b1304 10%);
+  background-size: 10px 10px;
   /* background: repeating-linear-gradient( */
   /*     transparent 0 40%, */
   /*     #8a240075 40% 60%, */

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 const Loading = ({ end }: { end: string }) => {
   return (
-    <div className="bg-primary-400 w-full h-3 lg:h-4 xl:h-5 rounded-full">
+    <div className="bg-primary-400 w-[95%] lg:w-full h-2 lg:h-4 xl:h-5 rounded-full self-center">
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: end }}
