@@ -49,7 +49,7 @@ model BlogContent {
   image_url   String?
   heading     String?
   code        String?
-  blog        Blog     @relation(fields: [blog_id], references: [blog_id])
+  blog        Blog     @relation(fields: [blog_id], references: [blog_id], onDelete: Cascade)
 }
 
 model Comments {
@@ -58,8 +58,8 @@ model Comments {
   message     String
   user_id     String
   created_at  DateTime @default(now())
-  blog        Blog     @relation(fields: [blog_id], references: [blog_id])
-  user        User     @relation(fields: [user_id], references: [user_id])
+  blog        Blog     @relation(fields: [blog_id], references: [blog_id], onDelete: Cascade)
+  user        User     @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
 }
 
 model Enquiry {

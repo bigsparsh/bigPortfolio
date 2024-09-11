@@ -44,6 +44,21 @@ const AddBlog = () => {
       setGlobalIndex((r) => r + 1);
     }
   };
+
+  const addCode = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (formRef.current) {
+      setElements([
+        ...elements,
+        {
+          type: "code",
+          index: globalIndex + 1,
+          name: globalIndex + 1 + "_code",
+        },
+      ]);
+      setGlobalIndex((r) => r + 1);
+    }
+  };
   const addHeading = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (formRef.current) {
@@ -57,7 +72,6 @@ const AddBlog = () => {
       ]);
       setGlobalIndex((r) => r + 1);
     }
-    console.log(elements);
   };
 
   const submitEverything = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -98,50 +112,66 @@ const AddBlog = () => {
           heading: formRef.current![localIndex++ + "_heading"].value,
         });
       }
+      if (formRef.current![localIndex + "_code"]) {
+        data.sections.push({
+          index: localIndex,
+          code: formRef.current![localIndex++ + "_code"].value,
+        });
+      }
     }
-    console.log(data);
     createBlog(data);
+    setElements([]);
   };
 
   return (
-    <div className="grid place-items-center h-screen w-full bg-sky-900 text-white ">
+    <div className="grid place-items-center h-screen w-full bg-primary-500 text-white ">
       <form className="text-black flex flex-col gap-3" ref={formRef}>
-        <div className="flex flex-col gap-3 fixed top-1/3 left-10">
+        <div className="flex flex-col gap-3 fixed top-1/3 left-10 text-primary-100">
           <button
-            className="border border-white p-3 rounded-xl bg-white w-fit"
+            className="border border-primary-100 p-3 rounded-xl bg-primary-400 w-fit"
             onClick={addImage}
           >
             <FaImages />
           </button>
 
           <button
-            className="border border-white p-3 rounded-xl bg-white w-fit"
+            className="border border-primary-100 p-3 rounded-xl bg-primary-400 w-fit"
             onClick={addHeading}
           >
             <FaHeading />
           </button>
 
           <button
-            className="border border-white p-3 rounded-xl bg-white w-fit"
+            className="border border-primary-100 p-3 rounded-xl bg-primary-400 w-fit"
             onClick={addParagraph}
           >
             <FaParagraph />
           </button>
 
           <button
-            className="border border-white p-3 rounded-xl bg-white w-fit"
-            disabled
+            className="border border-primary-100 p-3 rounded-xl bg-primary-400 w-fit"
+            onClick={addCode}
           >
             <FaCode />
           </button>
         </div>
+
+        <div className="flex flex-col gap-3 fixed top-1/3 right-10 text-primary-100">
+          <button
+            className="border border-primary-100 p-3 rounded-xl bg-primary-500 w-fit self-center outline-none"
+            onClick={submitEverything}
+          >
+            Submit
+          </button>
+        </div>
         <div className="relative self-center">
-          <div className="absolute top-2 left-[-40px] p-3 rounded-xl bg-white w-fit z-10">
+          <div className="absolute top-2 left-[-40px] p-3 rounded-xl bg-primary-400 text-primary-100 w-fit z-10">
             <FaTextSlash />
           </div>
           <textarea
             placeholder="title"
-            className="p-2 m-2 rounded-lg "
+            className="p-2 m-2 rounded-lg w-[70vw] bg-primary-400/50 text-primary-100 outline-none focus:ring-4 ring-primary-100"
+            rows={3}
             name="title"
           ></textarea>
         </div>
@@ -149,12 +179,13 @@ const AddBlog = () => {
           if (ele.type === "heading") {
             return (
               <div className="relative" key={ele.name}>
-                <div className="flex items-center justify-center gap-2 absolute top-2 left-[-40px] p-3 rounded-xl bg-white w-fit z-10">
+                <div className="flex items-center justify-center gap-2 absolute top-2 left-[-40px] p-3 rounded-xl bg-primary-400 text-primary-100 w-fit z-10">
                   <FaHeading />
                 </div>
                 <textarea
                   placeholder="Heading"
-                  className="p-2 m-2 rounded-lg w-full"
+                  className="p-2 m-2 rounded-lg w-[70vw] bg-primary-400/50 text-primary-100 outline-none focus:ring-4 ring-primary-100"
+                  rows={3}
                   name={ele.name}
                 ></textarea>
               </div>
@@ -164,12 +195,13 @@ const AddBlog = () => {
           if (ele.type === "para") {
             return (
               <div className="relative" key={ele.name}>
-                <div className="flex items-center justify-center gap-2 absolute top-2 left-[-40px] p-3 rounded-xl bg-white w-fit z-10">
+                <div className="flex items-center justify-center gap-2 absolute top-2 left-[-40px] p-3 rounded-xl bg-primary-400 text-primary-100 w-fit z-10">
                   <FaParagraph />
                 </div>
                 <textarea
                   placeholder="Paragraph"
-                  className="p-2 m-2 rounded-lg w-full"
+                  className="p-2 m-2 rounded-lg w-[70vw] bg-primary-400/50 text-primary-100 outline-none focus:ring-4 ring-primary-100"
+                  rows={3}
                   name={ele.name}
                 ></textarea>
               </div>
@@ -179,25 +211,35 @@ const AddBlog = () => {
           if (ele.type === "image") {
             return (
               <div className="relative" key={ele.name}>
-                <div className="flex items-center justify-center gap-2 absolute top-2 left-[-40px] p-3 rounded-xl bg-white w-fit z-10">
+                <div className="flex items-center justify-center gap-2 absolute top-2 left-[-40px] p-3 rounded-xl bg-primary-400 text-primary-100 w-fit z-10">
                   <FaImages />
                 </div>
                 <input
                   type="file"
                   accept="*.png"
                   name={ele.name}
-                  className="p-2 m-2 rounded-lg w-full bg-white"
+                  className="p-2 m-2 rounded-lg w-[70vw] bg-primary-400/50 text-primary-100 outline-none focus:ring-4 ring-primary-100 file:rounded-xl file:text-sm file:text-primary-100 file:bg-primary-500 file:px-5 file:py-2 file:border-none file:mr-10"
                 />
               </div>
             );
           }
+
+          if (ele.type === "code") {
+            return (
+              <div className="relative" key={ele.name}>
+                <div className="flex items-center justify-center gap-2 absolute top-2 left-[-40px] p-3 rounded-xl bg-primary-400 text-primary-100 w-fit z-10">
+                  <FaCode />
+                </div>
+                <textarea
+                  placeholder="Code"
+                  className="p-2 m-2 rounded-lg w-[70vw] bg-primary-400/50 text-primary-100 outline-none focus:ring-4 ring-primary-100"
+                  rows={10}
+                  name={ele.name}
+                ></textarea>
+              </div>
+            );
+          }
         })}
-        <button
-          className="border border-white p-3 rounded-xl bg-white w-fit self-center"
-          onClick={submitEverything}
-        >
-          Submit everything
-        </button>
       </form>
     </div>
   );

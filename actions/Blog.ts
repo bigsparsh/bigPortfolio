@@ -21,6 +21,8 @@ export const createBlog = async (blog: {
       image_url: "https://www.google.com",
     },
   });
+
+  console.log(blog.sections);
   for (let i = 0; i < blog.total; i++) {
     await prisma.blogContent.create({
       data: {

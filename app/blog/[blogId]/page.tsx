@@ -1,8 +1,8 @@
 import { getBlogData } from "@/actions/Blog";
 import { getComments } from "@/actions/Comment";
+import CodePart from "@/components/CodePart";
 import CommentBox from "@/components/CommentBox";
 import Sliding from "@/components/Sliding";
-import { FaPaperPlane } from "react-icons/fa";
 
 const BlogContent = async ({
   params,
@@ -44,6 +44,17 @@ radial-gradient(circle, #ff420050 10%, transparent 10%) center/ 20px 20px
             >
               {ele.heading}
             </h1>
+          );
+        }
+        if (ele.code) {
+          return (
+            <CodePart
+              key={ele.content_id}
+              showLineNumbers={true}
+              language="typescript"
+              text={ele.code}
+              className="px-3 md:px-10 lg:px-16 my-3"
+            />
           );
         }
         if (ele.image_url) {
