@@ -4,6 +4,7 @@ import { createBlog } from "@/actions/Blog";
 import { useRef, useState } from "react";
 import { FaCode, FaHeading, FaImages, FaParagraph } from "react-icons/fa";
 import { FaTextSlash } from "react-icons/fa6";
+import axios from "axios";
 
 const AddBlog = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -74,7 +75,7 @@ const AddBlog = () => {
     }
   };
 
-  const submitEverything = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const submitEverything = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const data: {
       total: number;
@@ -101,9 +102,20 @@ const AddBlog = () => {
         });
       }
       if (formRef.current![localIndex + "_image"]) {
+        const formdata = new FormData();
+        const file =
+          formRef.current![localIndex++ + "_image"].files[0] || "NO IMAGE";
+        formdata.append("upload_preset", "image_preset");
+        formdata.append("file", file);
+        formdata.append("folder", "post");
+        const req: any = await axios.post(
+          "https://api.cloudinary.com/v1_1/desdv6f1q/image/upload",
+          formdata,
+        );
+
         data.sections.push({
           index: localIndex,
-          image: formRef.current![localIndex++ + "_image"].value,
+          image: req.data.secure_url,
         });
       }
       if (formRef.current![localIndex + "_heading"]) {
