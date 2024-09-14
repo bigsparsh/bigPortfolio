@@ -16,6 +16,17 @@ const pixel_init = Pixelify_Sans({
 export const metadata: Metadata = {
   title: "Big Sparsh",
   description: "Portfolio / Resume for Sparsh Singh",
+  keywords: [
+    "Portfolio",
+    "Resume",
+    "Sparsh Singh",
+    "bigSparsh",
+    "bigsparsh",
+    "Sparsh",
+    "big sparsh",
+    "sparsh portfolio",
+    "sparsh github",
+  ],
 };
 
 export default function RootLayout({
