@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.judson {
+  font-family: var(--font-judson);
+}
+.pixel {
+  font-family: var(--font-pixel);
+}
+* {
+  user-select: none;
+  /* @apply border border-red-500; */
+}
+*::selection {
+  @apply bg-primary-200;
+  @apply text-white;
+}
+::-webkit-scrollbar {
+  @apply w-2;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-200;
+  @apply rounded-xl;
+}

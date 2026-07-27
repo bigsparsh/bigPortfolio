@@ -1,0 +1,58 @@
+@property --big-back {
+  syntax: "<angle>";
+  initial-value: 45deg;
+  inherits: false;
+}
+#back {
+  z-index: -2;
+  background:
+    radial-gradient(
+        circle at top left,
+        transparent 0 30%,
+        #ff4200 30% 40%,
+        transparent 40% 100%
+      )
+      center / 50px 50px,
+    radial-gradient(
+        circle at bottom right,
+        transparent 0 30%,
+        #ff4200 30% 40%,
+        transparent 40% 100%
+      )
+      center / 50px 50px;
+  background-color: #2e0800;
+}
+#fancy-form {
+  position: relative;
+}
+#fancy-form::before {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  inset: 0;
+  z-index: -1;
+  translate: -2.5% -2.5%;
+  background: linear-gradient(var(--big-back), #ff4200, #2e0800);
+  animation: rotate 5s infinite linear;
+}
+#fancy-form::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  filter: blur(100px);
+  height: 120%;
+  inset: 0;
+  z-index: -1;
+  translate: -10% -10%;
+  background: linear-gradient(var(--big-back), #ff4200, #2e0800);
+  animation: rotate 5s infinite linear;
+}
+@keyframes rotate {
+  from {
+    --big-back: 0deg;
+  }
+  to {
+    --big-back: 360deg;
+  }
+}

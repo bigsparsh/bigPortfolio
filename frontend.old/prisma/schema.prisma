@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  user_id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  profile_img String?
+  password  String?
+  comments  Comments[]
+}
+model Project {
+  project_id  String   @id @default(uuid())
+  name        String
+  description String
+  hosted_url String
+  github_url String
+  codepen_url String @default("")
+  image_url String
+  created_at DateTime @default(now())
+}
+model Blog {
+  blog_id     String   @id @default(uuid())
+  title       String
+  description String
+  image_url   String
+  created_at  DateTime @default(now())
+  blog_content BlogContent[]
+  comments Comments[]
+}
+
+model BlogContent {
+  content_id  String   @id @default(uuid())
+  blog_id     String
+  index       Int
+  paragraph   String?
+  image_url   String?
+  heading     String?
+  code        String?
+  blog        Blog     @relation(fields: [blog_id], references: [blog_id], onDelete: Cascade)
+}
+
+model Comments {
+  comment_id  String   @id @default(uuid())
+  blog_id     String
+  message     String
+  user_id     String
+  created_at  DateTime @default(now())
+  blog        Blog     @relation(fields: [blog_id], references: [blog_id], onDelete: Cascade)
+  user        User     @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+}
+
+model Enquiry {
+  enquiry_id  String   @id @default(uuid())
+  name        String
+  email       String
+  message     String
+  created_at  DateTime @default(now())
+}
