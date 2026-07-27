@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-
-
-const props = defineProps<{
+defineProps<{
   normalBorder: string
   activeBorder: string
   className?: string
@@ -23,3 +21,5 @@ const props = defineProps<{
       :class="activeBorder"></div>
   </div>
 </template>
+
+<style scoped></style>

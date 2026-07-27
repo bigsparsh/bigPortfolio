@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-100: #FF4200;
+  --color-primary-200: #C23706;
+  --color-primary-300: #A63200;
+  --color-primary-400: #8A2400;
+  --color-primary-500: #2E0800;
+
+  --font-sans: 'Sora', sans-serif !important;
+  --font-display: 'Space Grotesk', sans-serif !important;
+  --font-serif: 'Judson', serif !important;
+}
